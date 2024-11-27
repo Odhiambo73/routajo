@@ -1,0 +1,24 @@
+# Create a delivery system
+system = DeliverySystem()
+
+# Register a sender
+sender = DeliveryUser(
+    user_id="S001",
+    name="John Doe",
+    email="john@example.com",
+    phone="1234567890",
+    user_type=UserType.SENDER,
+    address="123 Sender St"
+)
+system.register_user(sender)
+
+# Register a receiver
+receiver = DeliveryUser(
+    user_id="R001",
+    name="Jane Smith",
+    email="jane@example.com",
+    phone="0987654321",
+    user_type=UserType.RECEIVER,
+    address="456 Receiver Ave"
+)
+system.register_user(receiver)
